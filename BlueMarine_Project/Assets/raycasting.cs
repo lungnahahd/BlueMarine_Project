@@ -31,6 +31,8 @@ public class raycasting : MonoBehaviour
     public Transform MainFishPos;
     public GameObject MainFish;
 
+    public GameObject ArrowPointer;
+
     void Start()
     {
 
@@ -106,6 +108,18 @@ public class raycasting : MonoBehaviour
                 {
                     StartCoroutine(moveMainFish());
                     Debug.Log("MainFish Hit");
+                    ArrowPointer.SetActive(true);
+                }
+            }
+            else if(hit.transform.tag == "ArrowPointer")
+            {
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2)
+                {
+                    transform.GetComponent<Animator>().SetBool("SeeArrow", true);
+                    Debug.Log("Go to MainFish");
                 }
             }
         }
@@ -161,4 +175,6 @@ public class raycasting : MonoBehaviour
             yield return null;
         }
     }
+
+    
 }
