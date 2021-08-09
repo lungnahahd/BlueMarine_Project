@@ -26,7 +26,10 @@ public class raycasting : MonoBehaviour
 
     public Transform SharkPos;
     public GameObject Shark;
-    public GameObject SharkText;   
+    public GameObject SharkText;
+
+    public Transform MainFishPos;
+    public GameObject MainFish;
 
     void Start()
     {
@@ -95,10 +98,21 @@ public class raycasting : MonoBehaviour
                 }
 
             }
-            else{
-                timeElapsed = 0;
-                pointer.fillAmount = 0;
+            else if(hit.transform.tag == "MainFish"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2)
+                {
+                    StartCoroutine(moveMainFish());
+                    Debug.Log("MainFish Hit");
+                }
             }
+        }
+        else
+        {
+            timeElapsed = 0;
+            pointer.fillAmount = 0;
         }
         Debug.DrawRay(cam.transform.position,forward,Color.red);
     }
@@ -133,9 +147,18 @@ public class raycasting : MonoBehaviour
     IEnumerator moveShark(){
         
         while(transform.position != SharkPos.position){
-             transform.position = Vector3.MoveTowards(transform.position,SharkPos.position,Time.deltaTime*100);
+             transform.position = Vector3.MoveTowards(transform.position,SharkPos.position,Time.deltaTime*10);
              yield return null;
         }
         
+    }
+
+    IEnumerator moveMainFish()
+    {
+        while(MainFish.transform.position != MainFishPos.position)
+        {
+            MainFish.transform.position = Vector3.MoveTowards(MainFish.transform.position, MainFishPos.position, Time.deltaTime);
+            yield return null;
+        }
     }
 }
