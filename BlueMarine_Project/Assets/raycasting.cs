@@ -106,7 +106,8 @@ public class raycasting : MonoBehaviour
 
                 if(timeElapsed >= 2)
                 {
-                    StartCoroutine(moveMainFish());
+                    //StartCoroutine(moveMainFish());
+                    MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                     Debug.Log("MainFish Hit");
                     ArrowPointer.SetActive(true);
                 }
@@ -119,6 +120,7 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2)
                 {
                     transform.GetComponent<Animator>().SetBool("SeeArrow", true);
+                    ArrowPointer.SetActive(false);
                     Debug.Log("Go to MainFish");
                 }
             }
