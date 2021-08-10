@@ -1,13 +1,14 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 
+
 public class raycasting : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    
     public GameObject cam;
     public Image pointer;
     float timeElapsed;
@@ -30,10 +31,9 @@ public class raycasting : MonoBehaviour
 
     void Start()
     {
-
+        
     }
-    
-
+   
     // Update is called once per frame
     void Update()
     {
@@ -127,7 +127,7 @@ public class raycasting : MonoBehaviour
              transform.position = Vector3.MoveTowards(transform.position,DolphinPos.position,Time.deltaTime*10);
              yield return null;
         }
-        
+    
     }
 
     IEnumerator moveShark(){
@@ -138,4 +138,5 @@ public class raycasting : MonoBehaviour
         }
         
     }
+
 }
