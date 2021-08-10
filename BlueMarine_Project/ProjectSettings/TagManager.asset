@@ -8,6 +8,8 @@ TagManager:
   - Turtle
   - Dolphin
   - Shark
+  - MainFish
+  - ArrowPointer
   layers:
   - Default
   - TransparentFX
