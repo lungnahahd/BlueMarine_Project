@@ -31,7 +31,8 @@ public class raycasting : MonoBehaviour
     public Transform MainFishPos;
     public GameObject MainFish;
 
-    public GameObject ArrowPointer;
+    public GameObject turtleArrowPointer1;
+    public GameObject turtleArrowPointer2;
 
     void Start()
     {
@@ -48,7 +49,7 @@ public class raycasting : MonoBehaviour
     void raticle()
     {
         RaycastHit hit;
-        Vector3 forward = cam.transform.TransformDirection(Vector3.forward*1000);
+        Vector3 forward = cam.transform.TransformDirection(Vector3.forward*100);
 
         if(Physics.Raycast(cam.transform.position,forward,out hit)){
             if(hit.transform.tag == "Whale"){
@@ -106,10 +107,9 @@ public class raycasting : MonoBehaviour
 
                 if(timeElapsed >= 2)
                 {
-                    //StartCoroutine(moveMainFish());
                     MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                     Debug.Log("MainFish Hit");
-                    ArrowPointer.SetActive(true);
+                    turtleArrowPointer1.SetActive(true);
                 }
             }
             else if(hit.transform.tag == "ArrowPointer")
@@ -120,8 +120,19 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2)
                 {
                     transform.GetComponent<Animator>().SetBool("SeeArrow", true);
-                    ArrowPointer.SetActive(false);
-                    Debug.Log("Go to MainFish");
+                    turtleArrowPointer1.SetActive(false);
+                    turtleArrowPointer2.SetActive(true);
+                }
+            }
+            else if(hit.transform.tag == "ArrowPointer2")
+            {
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2)
+                {
+                    transform.GetComponent<Animator>().SetBool("SeeArrow", false);
+                    turtleArrowPointer2.SetActive(false);
                 }
             }
         }
