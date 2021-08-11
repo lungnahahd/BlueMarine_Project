@@ -37,6 +37,9 @@ public class raycasting : MonoBehaviour
     public GameObject dolphinArrowPointer1;
     public GameObject dolphinArrowPOinter2;
 
+    public GameObject sharkArrowPointer1;
+    public GameObject sharkArrowPointer2;
+
     int count = 0;
 
     void Start()
@@ -120,6 +123,10 @@ public class raycasting : MonoBehaviour
                     {
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
                         dolphinArrowPointer1.SetActive(true);
+                    }else if(count == 2)
+                    {
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
+                        sharkArrowPointer1.SetActive(true);
                     }
                 }
             }
@@ -139,6 +146,10 @@ public class raycasting : MonoBehaviour
                     {
                         dolphinArrowPointer1.SetActive(false);
                         dolphinArrowPOinter2.SetActive(true);
+                    }else if(count == 2)
+                    {
+                        sharkArrowPointer1.SetActive(false);
+                        sharkArrowPointer2.SetActive(true);
                     }
                 }
             }
@@ -157,6 +168,10 @@ public class raycasting : MonoBehaviour
                     else if (count == 1)
                     {
                         dolphinArrowPOinter2.SetActive(false);
+                    }
+                    else if (count == 2)
+                    {
+                        sharkArrowPointer2.SetActive(false);
                     }
                     count += 1;
                 }
