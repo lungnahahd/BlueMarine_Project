@@ -34,6 +34,11 @@ public class raycasting : MonoBehaviour
     public GameObject turtleArrowPointer1;
     public GameObject turtleArrowPointer2;
 
+    public GameObject dolphinArrowPointer1;
+    public GameObject dolphinArrowPOinter2;
+
+    int count = 0;
+
     void Start()
     {
 
@@ -107,9 +112,15 @@ public class raycasting : MonoBehaviour
 
                 if(timeElapsed >= 2)
                 {
-                    MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
-                    Debug.Log("MainFish Hit");
-                    turtleArrowPointer1.SetActive(true);
+                    if(count == 0)
+                    {
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
+                        turtleArrowPointer1.SetActive(true);
+                    }else if(count == 1)
+                    {
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
+                        dolphinArrowPointer1.SetActive(true);
+                    }
                 }
             }
             else if(hit.transform.tag == "ArrowPointer")
@@ -120,8 +131,15 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2)
                 {
                     transform.GetComponent<Animator>().SetBool("SeeArrow", true);
-                    turtleArrowPointer1.SetActive(false);
-                    turtleArrowPointer2.SetActive(true);
+                    if(count == 0)
+                    {
+                        turtleArrowPointer1.SetActive(false);
+                        turtleArrowPointer2.SetActive(true);
+                    }else if(count == 1)
+                    {
+                        dolphinArrowPointer1.SetActive(false);
+                        dolphinArrowPOinter2.SetActive(true);
+                    }
                 }
             }
             else if(hit.transform.tag == "ArrowPointer2")
@@ -132,7 +150,15 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2)
                 {
                     transform.GetComponent<Animator>().SetBool("SeeArrow", false);
-                    turtleArrowPointer2.SetActive(false);
+                    if (count == 0)
+                    {
+                        turtleArrowPointer2.SetActive(false);
+                    }
+                    else if (count == 1)
+                    {
+                        dolphinArrowPOinter2.SetActive(false);
+                    }
+                    count += 1;
                 }
             }
         }
