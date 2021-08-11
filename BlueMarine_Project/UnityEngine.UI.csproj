@@ -55,17 +55,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Button.cs" />
-    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Text.cs" />
-    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\EventSystem.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\CanvasScaler.cs" />
-    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Slider.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\IMaskable.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Utility\VertexHelper.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\SetPropertyUtility.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\MoveDirection.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\FontUpdateTracker.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\BaseInputModule.cs" />
+    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Text.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Scrollbar.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\ExecuteEvents.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\VertexModifiers\PositionAsUV1.cs" />
@@ -92,6 +89,7 @@
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\FontData.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Graphic.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\CanvasUpdateRegistry.cs" />
+    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\EventSystem.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\AnimationTriggers.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\PointerInputModule.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\EventData\BaseEventData.cs" />
@@ -102,6 +100,7 @@
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\MaskUtilities.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\ScrollRect.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\StencilMaterial.cs" />
+    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Button.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Layout\LayoutRebuilder.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\RawImage.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\SpriteState.cs" />
@@ -139,6 +138,7 @@
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\EventSystem\InputModules\StandaloneInputModule.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Toggle.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\SpecializedCollections\IndexedSet.cs" />
+    <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\Slider.cs" />
     <Compile Include="C:\Program Files\Unity\2020.1.4f1\Editor\Data\Resources\PackageManager\BuiltInPackages\com.unity.ugui\Runtime\UI\Core\ToggleGroup.cs" />
   </ItemGroup>
   <ItemGroup>
