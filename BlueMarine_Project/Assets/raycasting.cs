@@ -64,51 +64,55 @@ public class raycasting : MonoBehaviour
 
         if(Physics.Raycast(cam.transform.position,forward,out hit)){
             if(hit.transform.tag == "Whale"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
 
                     StartCoroutine(moveWhale());
                     WhaleText.SetActive(true);
                     Whale.SetActive(false);
                     Debug.Log("Whale hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
 
                 }
             }else if(hit.transform.tag == "Turtle"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
         
                     StartCoroutine(moveTurtle());
                     TurtleText.SetActive(true);
                     Turtle.SetActive(false);
                     Debug.Log("Turtle hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
             }else if(hit.transform.tag == "Dolphin"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
         
                     StartCoroutine(moveDolphin());
                     DolphinText.SetActive(true);
                     Dolphin.SetActive(false);
                     Debug.Log("Dolphin hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
             }else if(hit.transform.tag == "Shark"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
         
                     StartCoroutine(moveShark());
                     SharkText.SetActive(true);
                     Shark.SetActive(false);
                     Debug.Log("Shark hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
             }
@@ -118,8 +122,10 @@ public class raycasting : MonoBehaviour
 
                 if(timeElapsed >= 2)
                 {
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = false;
                     if(count == 0)
                     {
+                        
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                         turtleArrowPointer1.SetActive(true);
                     }else if(count == 1)
@@ -153,6 +159,7 @@ public class raycasting : MonoBehaviour
                     {
                         dolphinArrowPointer1.SetActive(false);
                         dolphinArrowPOinter2.SetActive(true);
+
                     }else if(count == 2)
                     {
                         sharkArrowPointer1.SetActive(false);
@@ -175,17 +182,22 @@ public class raycasting : MonoBehaviour
                     if (count == 0)
                     {
                         turtleArrowPointer2.SetActive(false);
+                        Turtle.SetActive(true);
                     }
                     else if (count == 1)
                     {
                         dolphinArrowPOinter2.SetActive(false);
+                        Dolphin.SetActive(true);
                     }
                     else if (count == 2)
                     {
                         sharkArrowPointer2.SetActive(false);
-                    }else if(count == 3)
+                        Shark.SetActive(true);
+                    }
+                    else if(count == 3)
                     {
                         whaleArrowPointer2.SetActive(false);
+                        Whale.SetActive(true);
                     }
                     count += 1;
                 }

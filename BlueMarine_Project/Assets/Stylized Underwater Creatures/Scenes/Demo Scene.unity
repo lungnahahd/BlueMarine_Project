@@ -3730,6 +3730,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: MainFish
       objectReference: {fileID: 0}
+    - target: {fileID: 8649262020805639440, guid: 5414f777e99577b4bafc5f93c5b0ebe3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5414f777e99577b4bafc5f93c5b0ebe3, type: 3}
 --- !u!1001 &263828913
@@ -6658,6 +6662,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Dolphin
       objectReference: {fileID: 0}
+    - target: {fileID: 3278601213006354445, guid: 1266c71b9de700a41b090bcf0afdc9f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3904585251502832810, guid: 1266c71b9de700a41b090bcf0afdc9f9, type: 3}
       propertyPath: m_LocalPosition.x
       value: -249.64221
@@ -8743,6 +8751,10 @@ PrefabInstance:
     - target: {fileID: 7412948096231340274, guid: 4390f707049604a4d9927799713e2297, type: 3}
       propertyPath: m_TagString
       value: Turtle
+      objectReference: {fileID: 0}
+    - target: {fileID: 7412948096231340274, guid: 4390f707049604a4d9927799713e2297, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4390f707049604a4d9927799713e2297, type: 3}
@@ -16155,7 +16167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4161741031358586428, guid: 479a72f632fddb94ea70b9eb71da5635, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -40.382896
+      value: -21.4
       objectReference: {fileID: 0}
     - target: {fileID: 4161741031358586428, guid: 479a72f632fddb94ea70b9eb71da5635, type: 3}
       propertyPath: m_LocalPosition.z
@@ -16200,6 +16212,10 @@ PrefabInstance:
     - target: {fileID: 4364724558304197480, guid: 479a72f632fddb94ea70b9eb71da5635, type: 3}
       propertyPath: m_TagString
       value: Shark
+      objectReference: {fileID: 0}
+    - target: {fileID: 4364724558304197480, guid: 479a72f632fddb94ea70b9eb71da5635, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 479a72f632fddb94ea70b9eb71da5635, type: 3}
@@ -23383,6 +23399,10 @@ PrefabInstance:
     - target: {fileID: 3989649311085728314, guid: fc317f29e27f23149b625c43d02b7d63, type: 3}
       propertyPath: m_TagString
       value: Whale
+      objectReference: {fileID: 0}
+    - target: {fileID: 3989649311085728314, guid: fc317f29e27f23149b625c43d02b7d63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 929244554256724251, guid: fc317f29e27f23149b625c43d02b7d63, type: 3}
