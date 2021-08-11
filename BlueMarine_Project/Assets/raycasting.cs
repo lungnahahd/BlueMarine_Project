@@ -31,7 +31,19 @@ public class raycasting : MonoBehaviour
     public Transform MainFishPos;
     public GameObject MainFish;
 
-    public GameObject ArrowPointer;
+    public GameObject turtleArrowPointer1;
+    public GameObject turtleArrowPointer2;
+
+    public GameObject dolphinArrowPointer1;
+    public GameObject dolphinArrowPOinter2;
+
+    public GameObject sharkArrowPointer1;
+    public GameObject sharkArrowPointer2;
+
+    public GameObject whaleArrowPointer1;
+    public GameObject whaleArrowPointer2;
+
+    int count = 0;
 
     void Start()
     {
@@ -48,55 +60,59 @@ public class raycasting : MonoBehaviour
     void raticle()
     {
         RaycastHit hit;
-        Vector3 forward = cam.transform.TransformDirection(Vector3.forward*1000);
+        Vector3 forward = cam.transform.TransformDirection(Vector3.forward*100);
 
         if(Physics.Raycast(cam.transform.position,forward,out hit)){
             if(hit.transform.tag == "Whale"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
 
                     StartCoroutine(moveWhale());
                     WhaleText.SetActive(true);
                     Whale.SetActive(false);
                     Debug.Log("Whale hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
 
                 }
             }else if(hit.transform.tag == "Turtle"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
         
                     StartCoroutine(moveTurtle());
                     TurtleText.SetActive(true);
                     Turtle.SetActive(false);
                     Debug.Log("Turtle hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
             }else if(hit.transform.tag == "Dolphin"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
         
                     StartCoroutine(moveDolphin());
                     DolphinText.SetActive(true);
                     Dolphin.SetActive(false);
                     Debug.Log("Dolphin hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
             }else if(hit.transform.tag == "Shark"){
-                pointer.fillAmount = timeElapsed / 3;
+                pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
-                if(timeElapsed >= 3){
+                if(timeElapsed >= 2){
         
                     StartCoroutine(moveShark());
                     SharkText.SetActive(true);
                     Shark.SetActive(false);
                     Debug.Log("Shark hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
             }
@@ -106,10 +122,25 @@ public class raycasting : MonoBehaviour
 
                 if(timeElapsed >= 2)
                 {
-                    //StartCoroutine(moveMainFish());
-                    MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
-                    Debug.Log("MainFish Hit");
-                    ArrowPointer.SetActive(true);
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = false;
+                    if(count == 0)
+                    {
+                        
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
+                        turtleArrowPointer1.SetActive(true);
+                    }else if(count == 1)
+                    {
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
+                        dolphinArrowPointer1.SetActive(true);
+                    }else if(count == 2)
+                    {
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
+                        sharkArrowPointer1.SetActive(true);
+                    }else if(count == 3)
+                    {
+                        MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
+                        whaleArrowPointer1.SetActive(true);
+                    }
                 }
             }
             else if(hit.transform.tag == "ArrowPointer")
@@ -120,8 +151,55 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2)
                 {
                     transform.GetComponent<Animator>().SetBool("SeeArrow", true);
-                    ArrowPointer.SetActive(false);
-                    Debug.Log("Go to MainFish");
+                    if(count == 0)
+                    {
+                        turtleArrowPointer1.SetActive(false);
+                        turtleArrowPointer2.SetActive(true);
+                    }else if(count == 1)
+                    {
+                        dolphinArrowPointer1.SetActive(false);
+                        dolphinArrowPOinter2.SetActive(true);
+
+                    }else if(count == 2)
+                    {
+                        sharkArrowPointer1.SetActive(false);
+                        sharkArrowPointer2.SetActive(true);
+                    }else if(count == 3)
+                    {
+                        whaleArrowPointer1.SetActive(false);
+                        whaleArrowPointer2.SetActive(true);
+                    }
+                }
+            }
+            else if(hit.transform.tag == "ArrowPointer2")
+            {
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2)
+                {
+                    transform.GetComponent<Animator>().SetBool("SeeArrow", false);
+                    if (count == 0)
+                    {
+                        turtleArrowPointer2.SetActive(false);
+                        Turtle.SetActive(true);
+                    }
+                    else if (count == 1)
+                    {
+                        dolphinArrowPOinter2.SetActive(false);
+                        Dolphin.SetActive(true);
+                    }
+                    else if (count == 2)
+                    {
+                        sharkArrowPointer2.SetActive(false);
+                        Shark.SetActive(true);
+                    }
+                    else if(count == 3)
+                    {
+                        whaleArrowPointer2.SetActive(false);
+                        Whale.SetActive(true);
+                    }
+                    count += 1;
                 }
             }
         }
