@@ -633,6 +633,12 @@
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>C:\Program Files\Unity\2020.1.13f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\Facades\System.Xml.XPath.XDocument.dll</HintPath>
     </Reference>
+    <Reference Include="Google.XR.Cardboard">
+      <HintPath>Library\ScriptAssemblies\Google.XR.Cardboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.XR.Cardboard.Editor">
+      <HintPath>Library\ScriptAssemblies\Google.XR.Cardboard.Editor.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">
@@ -682,6 +688,34 @@
     <ProjectReference Include="UnityEditor.UI.csproj">
       <Project>{6E23FE40-1E1C-3C2F-B5F3-DFB0DB347007}</Project>
       <Name>UnityEditor.UI</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Management.csproj">
+      <Project>{3FA444FE-1FA9-05B8-0449-A6ECCE3759F2}</Project>
+      <Name>Unity.XR.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.Subsystem.Registration.csproj">
+      <Project>{A0FBF41F-2D08-5672-A35F-521200BCDA6E}</Project>
+      <Name>Unity.Subsystem.Registration</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.XR.LegacyInputHelpers.csproj">
+      <Project>{A3E336DB-B5C6-78B8-E55B-B351E097E5E1}</Project>
+      <Name>UnityEngine.XR.LegacyInputHelpers</Name>
+    </ProjectReference>
+    <ProjectReference Include="Unity.XR.Management.Editor.csproj">
+      <Project>{20213C32-422F-46A8-2F61-855DC16AF48C}</Project>
+      <Name>Unity.XR.Management.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.SpatialTracking.csproj">
+      <Project>{80211BF6-D6B0-9424-18A3-C765E2AB9277}</Project>
+      <Name>UnityEditor.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEngine.SpatialTracking.csproj">
+      <Project>{5671ADE0-FE95-D43F-C552-8EFF0F68505A}</Project>
+      <Name>UnityEngine.SpatialTracking</Name>
+    </ProjectReference>
+    <ProjectReference Include="UnityEditor.XR.LegacyInputHelpers.csproj">
+      <Project>{ACA65BDF-B5A0-BDC6-4DE9-153C2FE279FC}</Project>
+      <Name>UnityEditor.XR.LegacyInputHelpers</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
