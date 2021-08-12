@@ -17,7 +17,6 @@ public class DolphinTypingScript_B : MonoBehaviour
 
      IEnumerator typing()
     {
-        yield return new WaitForSeconds(2f);
 
         for(int i = 0; i < m_text3.Length; i++)
         {

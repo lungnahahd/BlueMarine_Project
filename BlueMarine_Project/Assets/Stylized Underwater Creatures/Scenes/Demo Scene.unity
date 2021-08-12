@@ -449,7 +449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &33815264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7437,15 +7437,19 @@ MonoBehaviour:
   whalePos: {fileID: 476699866}
   Whale: {fileID: 835042590}
   WhaleText: {fileID: 469595573}
+  WhaleTyping: {fileID: 612884762}
   TurtlePos: {fileID: 463212339}
   Turtle: {fileID: 1364432509}
   TurtleText: {fileID: 334238776}
+  TurtleTyping: {fileID: 1157619327}
   DolphinPos: {fileID: 1590579098}
   Dolphin: {fileID: 922973885}
   DolphinText: {fileID: 639781502}
+  DolphinTyping: {fileID: 33815263}
   SharkPos: {fileID: 337282810}
   Shark: {fileID: 2122461166}
   SharkText: {fileID: 1362842543}
+  SharkTyping: {fileID: 1273285654}
   MainFishPos: {fileID: 0}
   MainFish: {fileID: 1877342264}
   turtleArrowPointer1: {fileID: 341011805}
@@ -8908,7 +8912,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &612884763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16373,7 +16377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1157619328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18026,7 +18030,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1273285655
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,8 +17,7 @@ public class TurtleTypingScript_B : MonoBehaviour
 
      IEnumerator typing()
     {
-        yield return new WaitForSeconds(2f);
-
+       
         for(int i = 0; i < m_text2.Length; i++)
         {
             tx2.text = m_text2.Substring(0,i);

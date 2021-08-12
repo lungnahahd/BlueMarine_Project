@@ -16,8 +16,7 @@ public class WhaleTypingScript_B : MonoBehaviour
 
      IEnumerator typing()
     {
-        yield return new WaitForSeconds(2f);
-
+      
         for(int i = 0; i < m_text1.Length; i++)
         {
             tx1.text = m_text1.Substring(0,i);

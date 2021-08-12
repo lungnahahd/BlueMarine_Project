@@ -16,8 +16,7 @@ public class SharkTypingScript_B : MonoBehaviour
 
     IEnumerator typing()
     {
-        yield return new WaitForSeconds(2f);
-
+       
         for(int i = 0; i < m_text4.Length; i++)
         {
             tx4.text = m_text4.Substring(0,i);

@@ -15,18 +15,22 @@ public class raycasting : MonoBehaviour
     public Transform whalePos;
     public GameObject Whale;
     public GameObject WhaleText;
+    public GameObject WhaleTyping;
 
     public Transform TurtlePos;
     public GameObject Turtle;
     public GameObject TurtleText;
+    public GameObject TurtleTyping;
 
     public Transform DolphinPos;
     public GameObject Dolphin;
     public GameObject DolphinText;
+    public GameObject DolphinTyping;
 
     public Transform SharkPos;
     public GameObject Shark;
     public GameObject SharkText;
+    public GameObject SharkTyping;
 
     public Transform MainFishPos;
     public GameObject MainFish;
@@ -70,6 +74,7 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2){
 
                     StartCoroutine(moveWhale());
+                    WhaleTyping.SetActive(true);
                     WhaleText.SetActive(true);
                     Whale.SetActive(false);
                     Debug.Log("Whale hit");
@@ -83,6 +88,7 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2){
         
                     StartCoroutine(moveTurtle());
+                    TurtleTyping.SetActive(true);
                     TurtleText.SetActive(true);
                     Turtle.SetActive(false);
                     Debug.Log("Turtle hit");
@@ -96,6 +102,7 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2){
         
                     StartCoroutine(moveDolphin());
+                    DolphinTyping.SetActive(true);
                     DolphinText.SetActive(true);
                     Dolphin.SetActive(false);
                     Debug.Log("Dolphin hit");
@@ -109,6 +116,7 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2){
         
                     StartCoroutine(moveShark());
+                    SharkTyping.SetActive(true);
                     SharkText.SetActive(true);
                     Shark.SetActive(false);
                     Debug.Log("Shark hit");
