@@ -32,6 +32,25 @@ public class raycasting : MonoBehaviour
     public GameObject SharkText;
     public GameObject SharkTyping;
 
+
+    //firstCanvas
+    public GameObject FirstCanvasB1;
+    public GameObject FirstCanvasB2;
+    public GameObject FirstCanvasB3;
+    public GameObject text1;
+    public GameObject text2;
+    public GameObject text3;
+    public GameObject text4;
+    
+    public GameObject FirstCanvasT2;
+    public GameObject FirstCanvasT3;
+    public GameObject FirstCanvasT4;
+
+
+
+
+
+
     public Transform MainFishPos;
     public GameObject MainFish;
 
@@ -65,7 +84,6 @@ public class raycasting : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 forward = cam.transform.TransformDirection(Vector3.forward*100);
-
         if(Physics.Raycast(cam.transform.position,forward,out hit)){
             if(hit.transform.tag == "Whale"){
                 pointer.fillAmount = timeElapsed / 2;
@@ -123,6 +141,60 @@ public class raycasting : MonoBehaviour
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
+            }else if(hit.transform.tag == "FirstCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                    
+                    text1.SetActive(false);
+                    text2.SetActive(true);
+
+                    FirstCanvasT2.SetActive(true);
+
+                    FirstCanvasB1.SetActive(false);
+                    FirstCanvasB2.SetActive(true);
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                }
+
+            }else if(hit.transform.tag == "FirstCanvasB2"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+
+                    text2.SetActive(false);
+                    text3.SetActive(true);
+
+                    FirstCanvasT3.SetActive(true);
+
+                    FirstCanvasB2.SetActive(false);
+                    FirstCanvasB3.SetActive(true);
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+                    
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                }
+
+            }else if(hit.transform.tag == "FirstCanvasB3"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                    text3.SetActive(false);
+                    text4.SetActive(true);
+
+                    FirstCanvasT4.SetActive(true);
+
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+                    Debug.Log("but3 hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                }
+
             }
             else if(hit.transform.tag == "MainFish"){
                 pointer.fillAmount = timeElapsed / 2;
@@ -133,6 +205,8 @@ public class raycasting : MonoBehaviour
                     MainFish.transform.GetComponent<BoxCollider>().enabled = false;
                     if(count == 0)
                     {
+                        text4.SetActive(false);
+                        FirstCanvasB3.SetActive(false);
                         
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                         turtleArrowPointer1.SetActive(true);
