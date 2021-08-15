@@ -157,7 +157,7 @@ public class raycasting : MonoBehaviour
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
 
-                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                   
                 }
 
             }else if(hit.transform.tag == "FirstCanvasB2"){
@@ -176,7 +176,7 @@ public class raycasting : MonoBehaviour
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
                     
-                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                    
                 }
 
             }else if(hit.transform.tag == "FirstCanvasB3"){
