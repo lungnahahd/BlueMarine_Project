@@ -22,10 +22,12 @@ public class raycasting : MonoBehaviour
     public GameObject TurtleText;
     public GameObject TurtleTyping;
 
+
     public Transform DolphinPos;
     public GameObject Dolphin;
     public GameObject DolphinText;
     public GameObject DolphinTyping;
+
 
     public Transform SharkPos;
     public GameObject Shark;
@@ -46,6 +48,16 @@ public class raycasting : MonoBehaviour
     public GameObject FirstCanvasT3;
     public GameObject FirstCanvasT4;
 
+
+    //secondCanvas
+    public GameObject SecondCanvasB1;
+    public GameObject Ttext1;
+    public GameObject Ttext2;
+    public GameObject SecondCanvas2Text;
+
+    public GameObject SecondCanvasT1;
+    public GameObject SecondCanvasT2;
+    public GameObject SecondCanvas2T;
 
 
 
@@ -109,6 +121,8 @@ public class raycasting : MonoBehaviour
                     TurtleTyping.SetActive(true);
                     TurtleText.SetActive(true);
                     Turtle.SetActive(false);
+
+                    Ttext2.SetActive(false);
                     Debug.Log("Turtle hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
@@ -186,13 +200,31 @@ public class raycasting : MonoBehaviour
                 if(timeElapsed >= 2){
                     text3.SetActive(false);
                     text4.SetActive(true);
-
                     FirstCanvasT4.SetActive(true);
+
+                    FirstCanvasB3.SetActive(false);
 
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
                     Debug.Log("but3 hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                }
+
+            }else if(hit.transform.tag == "SecondCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                    Ttext1.SetActive(false);
+
+                    SecondCanvasT2.SetActive(true);
+                    Ttext2.SetActive(true);
+                    
+                    SecondCanvasB1.SetActive(false);
+                    Turtle.transform.GetComponent<BoxCollider>().enabled = true;
+
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
                 }
 
             }
@@ -206,12 +238,15 @@ public class raycasting : MonoBehaviour
                     if(count == 0)
                     {
                         text4.SetActive(false);
-                        FirstCanvasB3.SetActive(false);
-                        
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                         turtleArrowPointer1.SetActive(true);
                     }else if(count == 1)
                     {
+                        TurtleText.SetActive(false);
+
+                        SecondCanvas2T.SetActive(true);
+                        SecondCanvas2Text.SetActive(true);
+                      
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
                         dolphinArrowPointer1.SetActive(true);
                     }else if(count == 2)
@@ -239,6 +274,7 @@ public class raycasting : MonoBehaviour
                         turtleArrowPointer2.SetActive(true);
                     }else if(count == 1)
                     {
+                        SecondCanvas2Text.SetActive(false);
                         dolphinArrowPointer1.SetActive(false);
                         dolphinArrowPOinter2.SetActive(true);
 
@@ -265,6 +301,11 @@ public class raycasting : MonoBehaviour
                     {
                         turtleArrowPointer2.SetActive(false);
                         Turtle.SetActive(true);
+                        
+                        SecondCanvasT1.SetActive(true);
+                        Ttext1.SetActive(true);
+                        
+                        SecondCanvasB1.SetActive(true);
                     }
                     else if (count == 1)
                     {
