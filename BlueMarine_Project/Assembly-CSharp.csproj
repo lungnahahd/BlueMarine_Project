@@ -98,10 +98,12 @@
      <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\FloatEvent.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\DummyHeadsetProvider.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviders\EditorHeadsetProvider.cs" />
+     <Compile Include="Assets\SecondCanvasTyping\SecondCanvas2T.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrTrackedController.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrLaserPointer.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerUtils.cs" />
      <Compile Include="Assets\TypingScript\TurtleTypingScript_B.cs" />
+     <Compile Include="Assets\SecondCanvasTyping\SecondCanvasT2.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\IControllerProvider.cs" />
      <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaSettingsProvider.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrActivityHelper.cs" />
@@ -116,6 +118,7 @@
      <Compile Include="Assets\GoogleVR\Beta\Scripts\Internal\GvrBetaAndroidNativeControllerInputProvider.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Tooltips\GvrControllerTooltipsSimple.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrIntent.cs" />
+     <Compile Include="Assets\SecondCanvasTyping\SecondCanvasT1.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\HeadsetProviderFactory.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviderFactory.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\GvrKeyboardIntent.cs" />
@@ -146,6 +149,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Headset\Internal\IHeadsetProvider.cs" />
      <Compile Include="Assets\TypingScript\DolphinTypingScript_B.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\IKeyboardProvider.cs" />
+     <Compile Include="Assets\ThirdCanvasTyping\ThirdCanvasT1.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\VideoControlsManager.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrPointerGraphicRaycaster.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorConfig.cs" />
@@ -162,6 +166,7 @@
      <Compile Include="Assets\GoogleVR\Scripts\Controller\ArmModel\IGvrArmModelReceiver.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Utilities\GvrMathHelpers.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\Emulator\EmulatorClientSocket.cs" />
+     <Compile Include="Assets\ThirdCanvasTyping\ThirdCanvasT2.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\GvrControllerInput.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Permissions\GvrPermissionsRequester.cs" />
      <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\UserControlThirdPerson.cs" />
@@ -175,9 +180,7 @@
      <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerVisualMulti.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\AndroidNativeKeyboardProvider.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\EmulatorKeyboardProvider.cs" />
-     <Compile Include="Assets\SecondCanvasTyping\SecondCanvasT1.cs" />
-     <Compile Include="Assets\SecondCanvasTyping\SecondCanvasT2.cs" />
-     <Compile Include="Assets\SecondCanvasTyping\SecondCanvas2T.cs" />
+     <Compile Include="Assets\ThirdCanvasTyping\ThirdCanvas2T.cs" />
      <None Include="Assets\spritefont_and_other\document_and_picturelist\readme.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />

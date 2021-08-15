@@ -61,6 +61,20 @@ public class raycasting : MonoBehaviour
 
 
 
+     //ThirdCanvas
+    public GameObject ThirdCanvasB1;
+    public GameObject Thtext1;
+    public GameObject Thtext2;  
+    public GameObject ThirdCanvas2Text;
+
+    public GameObject ThirdCanvasT1;
+    public GameObject ThirdCanvasT2;
+    public GameObject ThirdCanvas2T;
+
+
+
+
+
 
 
     public Transform MainFishPos;
@@ -137,6 +151,8 @@ public class raycasting : MonoBehaviour
                     DolphinTyping.SetActive(true);
                     DolphinText.SetActive(true);
                     Dolphin.SetActive(false);
+
+                    Thtext2.SetActive(false);
                     Debug.Log("Dolphin hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
@@ -227,6 +243,24 @@ public class raycasting : MonoBehaviour
                     pointer.fillAmount = 0;
                 }
 
+            }else if(hit.transform.tag == "ThirdCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                   Thtext1.SetActive(false);
+
+                   ThirdCanvasT2.SetActive(true);
+                   Thtext2.SetActive(true);
+                  
+                   ThirdCanvasB1.SetActive(false);
+                   Dolphin.transform.GetComponent<BoxCollider>().enabled = true;
+
+                   timeElapsed = 0;
+                   pointer.fillAmount = 0;
+
+                }
+
             }
             else if(hit.transform.tag == "MainFish"){
                 pointer.fillAmount = timeElapsed / 2;
@@ -251,6 +285,12 @@ public class raycasting : MonoBehaviour
                         dolphinArrowPointer1.SetActive(true);
                     }else if(count == 2)
                     {
+                        
+                        DolphinText.SetActive(false);
+
+                        ThirdCanvas2T.SetActive(true);
+                        ThirdCanvas2Text.SetActive(true);
+
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                         sharkArrowPointer1.SetActive(true);
                     }else if(count == 3)
@@ -280,6 +320,7 @@ public class raycasting : MonoBehaviour
 
                     }else if(count == 2)
                     {
+                        ThirdCanvas2Text.SetActive(false);
                         sharkArrowPointer1.SetActive(false);
                         sharkArrowPointer2.SetActive(true);
                     }else if(count == 3)
@@ -311,6 +352,11 @@ public class raycasting : MonoBehaviour
                     {
                         dolphinArrowPOinter2.SetActive(false);
                         Dolphin.SetActive(true);
+
+                        ThirdCanvasT1.SetActive(true);
+                        Thtext1.SetActive(true);
+
+                        ThirdCanvasB1.SetActive(true);
                     }
                     else if (count == 2)
                     {

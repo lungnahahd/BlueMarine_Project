@@ -8,7 +8,7 @@ public class DolphinTypingScript_B : MonoBehaviour
     // Start is called before the first frame update
 
     public Text tx3;
-    private string m_text3 = "연간 1,200만 톤의 플라스틱이 바다로 유입됩니다. 대부분의 해양 플라스틱은 육상의 생활 쓰레기나 산업 폐기물로 부터 유입됩니다.바다의 플라스틱은 모든 해양생물에게 악영향을 미칩니다. 비닐봉지가 해파리인줄알고 삼키는 고래의 뱃속에는 100kg에 달하는 플라스틱, 끈, 비닐봉지가 나왔습니다.";
+    private string m_text3 = "안녕 나는 돌고래야!! 나는물에 살지만 포유류라서 폐호흡을해~ 근데 저번에 그물에 꼬리가 걸려서 죽을뻔했어,,,, 사람들이 무심코 버린 폐그물에 우리 돌고래들이 죽을수있다는걸 알아줘,,,, 마린이가 다른 친구를 소개 시켜줄꺼야          [마린이한데 커서를 올리세요] ";
 
     void Start()
     {

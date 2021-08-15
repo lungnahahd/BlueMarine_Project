@@ -15,6 +15,7 @@ TagManager:
   - FirstCanvasB2
   - FirstCanvasB3
   - SecondCanvasB1
+  - ThirdCanvasB1
   layers:
   - Default
   - TransparentFX
