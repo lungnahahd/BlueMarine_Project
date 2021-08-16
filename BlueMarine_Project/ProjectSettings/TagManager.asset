@@ -11,6 +11,12 @@ TagManager:
   - MainFish
   - ArrowPointer
   - ArrowPointer2
+  - FirstCanvasB1
+  - FirstCanvasB2
+  - FirstCanvasB3
+  - SecondCanvasB1
+  - ThirdCanvasB1
+  - FourthCanvasB1
   layers:
   - Default
   - TransparentFX

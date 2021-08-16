@@ -22,15 +22,72 @@ public class raycasting : MonoBehaviour
     public GameObject TurtleText;
     public GameObject TurtleTyping;
 
+
     public Transform DolphinPos;
     public GameObject Dolphin;
     public GameObject DolphinText;
     public GameObject DolphinTyping;
 
+
     public Transform SharkPos;
     public GameObject Shark;
     public GameObject SharkText;
     public GameObject SharkTyping;
+
+
+    //firstCanvas
+    public GameObject FirstCanvasB1;
+    public GameObject FirstCanvasB2;
+    public GameObject FirstCanvasB3;
+    public GameObject text1;
+    public GameObject text2;
+    public GameObject text3;
+    public GameObject text4;
+    
+    public GameObject FirstCanvasT2;
+    public GameObject FirstCanvasT3;
+    public GameObject FirstCanvasT4;
+
+
+    //secondCanvas
+    public GameObject SecondCanvasB1;
+    public GameObject Ttext1;
+    public GameObject Ttext2;
+    public GameObject SecondCanvas2Text;
+
+    public GameObject SecondCanvasT1;
+    public GameObject SecondCanvasT2;
+    public GameObject SecondCanvas2T;
+
+
+
+     //ThirdCanvas
+    public GameObject ThirdCanvasB1;
+    public GameObject Thtext1;
+    public GameObject Thtext2;  
+    public GameObject ThirdCanvas2Text;
+
+    public GameObject ThirdCanvasT1;
+    public GameObject ThirdCanvasT2;
+    public GameObject ThirdCanvas2T;
+
+
+
+     //FourthCanvas
+    public GameObject FourthCanvasB1;
+    public GameObject Fotext1;
+    public GameObject Fotext2;  
+    public GameObject FourthCanvas2Text;
+
+    public GameObject FourthCanvasT1;
+    public GameObject FourthCanvasT2;
+    public GameObject FourthCanvas2T;
+
+
+
+
+
+
 
     public Transform MainFishPos;
     public GameObject MainFish;
@@ -65,7 +122,6 @@ public class raycasting : MonoBehaviour
     {
         RaycastHit hit;
         Vector3 forward = cam.transform.TransformDirection(Vector3.forward*100);
-
         if(Physics.Raycast(cam.transform.position,forward,out hit)){
             if(hit.transform.tag == "Whale"){
                 pointer.fillAmount = timeElapsed / 2;
@@ -91,6 +147,8 @@ public class raycasting : MonoBehaviour
                     TurtleTyping.SetActive(true);
                     TurtleText.SetActive(true);
                     Turtle.SetActive(false);
+
+                    Ttext2.SetActive(false);
                     Debug.Log("Turtle hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
@@ -105,6 +163,8 @@ public class raycasting : MonoBehaviour
                     DolphinTyping.SetActive(true);
                     DolphinText.SetActive(true);
                     Dolphin.SetActive(false);
+
+                    Thtext2.SetActive(false);
                     Debug.Log("Dolphin hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
@@ -119,8 +179,118 @@ public class raycasting : MonoBehaviour
                     SharkTyping.SetActive(true);
                     SharkText.SetActive(true);
                     Shark.SetActive(false);
+
+                    Fotext2.SetActive(false);
                     Debug.Log("Shark hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                }
+
+            }else if(hit.transform.tag == "FirstCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                    
+                    text1.SetActive(false);
+                    text2.SetActive(true);
+
+                    FirstCanvasT2.SetActive(true);
+
+                    FirstCanvasB1.SetActive(false);
+                    FirstCanvasB2.SetActive(true);
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+
+                   
+                }
+
+            }else if(hit.transform.tag == "FirstCanvasB2"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+
+                    text2.SetActive(false);
+                    text3.SetActive(true);
+
+                    FirstCanvasT3.SetActive(true);
+
+                    FirstCanvasB2.SetActive(false);
+                    FirstCanvasB3.SetActive(true);
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+                    
+                    
+                }
+
+            }else if(hit.transform.tag == "FirstCanvasB3"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                    text3.SetActive(false);
+                    text4.SetActive(true);
+                    FirstCanvasT4.SetActive(true);
+
+                    FirstCanvasB3.SetActive(false);
+
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+                    Debug.Log("but3 hit");
+                    MainFish.transform.GetComponent<BoxCollider>().enabled = true;
+                }
+
+            }else if(hit.transform.tag == "SecondCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                    Ttext1.SetActive(false);
+
+                    SecondCanvasT2.SetActive(true);
+                    Ttext2.SetActive(true);
+                    
+                    SecondCanvasB1.SetActive(false);
+                    Turtle.transform.GetComponent<BoxCollider>().enabled = true;
+
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+                }
+
+            }else if(hit.transform.tag == "ThirdCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                   Thtext1.SetActive(false);
+
+                   ThirdCanvasT2.SetActive(true);
+                   Thtext2.SetActive(true);
+                  
+                   ThirdCanvasB1.SetActive(false);
+                   Dolphin.transform.GetComponent<BoxCollider>().enabled = true;
+
+                   timeElapsed = 0;
+                   pointer.fillAmount = 0;
+
+                }
+
+            }else if(hit.transform.tag == "FourthCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                   Fotext1.SetActive(false);
+
+                   FourthCanvasT2.SetActive(true);
+                   Fotext2.SetActive(true);
+                  
+                   FourthCanvasB1.SetActive(false);
+                   Shark.transform.GetComponent<BoxCollider>().enabled = true;
+
+                   timeElapsed = 0;
+                   pointer.fillAmount = 0;
+
                 }
 
             }
@@ -133,19 +303,34 @@ public class raycasting : MonoBehaviour
                     MainFish.transform.GetComponent<BoxCollider>().enabled = false;
                     if(count == 0)
                     {
-                        
+                        text4.SetActive(false);
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                         turtleArrowPointer1.SetActive(true);
                     }else if(count == 1)
                     {
+                        TurtleText.SetActive(false);
+
+                        SecondCanvas2T.SetActive(true);
+                        SecondCanvas2Text.SetActive(true);
+                      
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
                         dolphinArrowPointer1.SetActive(true);
                     }else if(count == 2)
                     {
+                        DolphinText.SetActive(false);
+
+                        ThirdCanvas2T.SetActive(true);
+                        ThirdCanvas2Text.SetActive(true);
+
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
                         sharkArrowPointer1.SetActive(true);
                     }else if(count == 3)
                     {
+                        SharkText.SetActive(false);
+
+                        FourthCanvas2T.SetActive(true);
+                        FourthCanvas2Text.SetActive(true);
+
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
                         whaleArrowPointer1.SetActive(true);
                     }
@@ -165,15 +350,18 @@ public class raycasting : MonoBehaviour
                         turtleArrowPointer2.SetActive(true);
                     }else if(count == 1)
                     {
+                        SecondCanvas2Text.SetActive(false);
                         dolphinArrowPointer1.SetActive(false);
                         dolphinArrowPOinter2.SetActive(true);
 
                     }else if(count == 2)
                     {
+                        ThirdCanvas2Text.SetActive(false);
                         sharkArrowPointer1.SetActive(false);
                         sharkArrowPointer2.SetActive(true);
                     }else if(count == 3)
                     {
+                        FourthCanvas2Text.SetActive(false);
                         whaleArrowPointer1.SetActive(false);
                         whaleArrowPointer2.SetActive(true);
                     }
@@ -191,16 +379,31 @@ public class raycasting : MonoBehaviour
                     {
                         turtleArrowPointer2.SetActive(false);
                         Turtle.SetActive(true);
+                        
+                        SecondCanvasT1.SetActive(true);
+                        Ttext1.SetActive(true);
+                        
+                        SecondCanvasB1.SetActive(true);
                     }
                     else if (count == 1)
                     {
                         dolphinArrowPOinter2.SetActive(false);
                         Dolphin.SetActive(true);
+
+                        ThirdCanvasT1.SetActive(true);
+                        Thtext1.SetActive(true);
+
+                        ThirdCanvasB1.SetActive(true);
                     }
                     else if (count == 2)
                     {
                         sharkArrowPointer2.SetActive(false);
                         Shark.SetActive(true);
+
+                        Fotext1.SetActive(true);
+                        FourthCanvasT1.SetActive(true);
+
+                        FourthCanvasB1.SetActive(true);
                     }
                     else if(count == 3)
                     {
