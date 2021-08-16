@@ -112,6 +112,7 @@
      <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaHeadset.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\VideoDemo\InputEvents\TouchPadEvent.cs" />
      <Compile Include="Assets\FirstCanvasTyping\FirstCanvasT3.cs" />
+     <Compile Include="Assets\ThirdCanvasTyping\ThirdCanvas2T.cs" />
      <Compile Include="Assets\FirstCanvasTyping\FirstCanvasT2.cs" />
      <Compile Include="Assets\GoogleVR\Demos\Scripts\HelloVR\ObjectController.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Controller\Internal\ControllerState.cs" />
@@ -180,7 +181,9 @@
      <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerVisualMulti.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\AndroidNativeKeyboardProvider.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\EmulatorKeyboardProvider.cs" />
-     <Compile Include="Assets\ThirdCanvasTyping\ThirdCanvas2T.cs" />
+     <Compile Include="Assets\FourthCanvasTyping\FourthCanvasT1.cs" />
+     <Compile Include="Assets\FourthCanvasTyping\FourthCanvasT2.cs" />
+     <Compile Include="Assets\FourthCanvasTyping\FourthCanvas2T.cs" />
      <None Include="Assets\spritefont_and_other\document_and_picturelist\readme.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />

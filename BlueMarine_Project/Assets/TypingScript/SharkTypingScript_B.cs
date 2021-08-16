@@ -7,8 +7,7 @@ public class SharkTypingScript_B : MonoBehaviour
 {
     // Start is called before the first frame update
     public Text tx4;
-    private string m_text4 = "연간 1,200만 톤의 플라스틱이 바다로 유입됩니다. 대부분의 해양 플라스틱은 육상의 생활 쓰레기나 산업 폐기물로 부터 유입됩니다.바다의 플라스틱은 모든 해양생물에게 악영향을 미칩니다. 비닐봉지가 해파리인줄알고 삼키는 고래의 뱃속에는 100kg에 달하는 플라스틱, 끈, 비닐봉지가 나왔습니다.";
-
+    private string m_text4 = "안녕!! 나는 바다 최강의 포식자 상어야~ 근데 요즘 고민이 생겼어 피부병이 걸렸는지 피부가 이상해ㅜㅠㅠ 무분별한 바다 쓰레기로 인해 수온이 상승하고 다양한 바이러스가 생겨나서 그런거 같아ㅠㅜㅠㅜ 너무 간지러워,,,, 마린이가 마지막 친구를 소개시켜줄꺼야     [마린이에 커서를 올리세요] ";
     void Start()
     {
          StartCoroutine(typing());
