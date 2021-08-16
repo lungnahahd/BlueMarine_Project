@@ -14,9 +14,7 @@ TagManager:
   - FirstCanvasB1
   - FirstCanvasB2
   - FirstCanvasB3
-  - SecondCanvasB1
-  - ThirdCanvasB1
-  - FourthCanvasB1
+  - TV
   layers:
   - Default
   - TransparentFX
