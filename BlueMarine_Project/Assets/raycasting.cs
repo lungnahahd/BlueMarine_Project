@@ -12,10 +12,25 @@ public class raycasting : MonoBehaviour
     public Image pointer;
     float timeElapsed;
 
-    public Transform whalePos;
-    public GameObject Whale;
-    public GameObject WhaleText;
-    public GameObject WhaleTyping;
+    public Transform ManPos;
+    public GameObject Man;
+    public GameObject ManText1;
+    public GameObject ManText2;
+    public GameObject ManTyping1;
+    public GameObject ManTyping2;
+    public GameObject ManCanvasB1;
+
+    //FifthCanvas
+    public GameObject FifthCanvasB1;
+    public GameObject FifthCanvasB2;
+    public GameObject Fitext1;
+    public GameObject Fitext2;  
+    public GameObject Fitext3;  
+
+    public GameObject FifthCanvasT1;
+    public GameObject FifthCanvasT2;
+    public GameObject FifthCanvasT3;
+
 
     public Transform TurtlePos;
     public GameObject Turtle;
@@ -101,8 +116,8 @@ public class raycasting : MonoBehaviour
     public GameObject sharkArrowPointer1;
     public GameObject sharkArrowPointer2;
 
-    public GameObject whaleArrowPointer1;
-    public GameObject whaleArrowPointer2;
+    public GameObject ManArrowPointer1;
+    public GameObject ManArrowPointer2;
 
     int count = 0;
 
@@ -123,16 +138,19 @@ public class raycasting : MonoBehaviour
         RaycastHit hit;
         Vector3 forward = cam.transform.TransformDirection(Vector3.forward*100);
         if(Physics.Raycast(cam.transform.position,forward,out hit)){
-            if(hit.transform.tag == "Whale"){
+            if(hit.transform.tag == "Man"){
                 pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
                 if(timeElapsed >= 2){
 
-                    StartCoroutine(moveWhale());
-                    WhaleTyping.SetActive(true);
-                    WhaleText.SetActive(true);
-                    Whale.SetActive(false);
+                    StartCoroutine(moveMan());
+                    ManTyping1.SetActive(true);
+                    ManText1.SetActive(true);
+                    //Man.SetActive(false);
+
+                    Fitext2.SetActive(false);
+                    ManCanvasB1.SetActive(true);
                     Debug.Log("Whale hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
 
@@ -293,6 +311,60 @@ public class raycasting : MonoBehaviour
 
                 }
 
+            }else if(hit.transform.tag == "FifthCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                   Fitext1.SetActive(false);
+
+                   FifthCanvasT2.SetActive(true);
+                   Fitext2.SetActive(true);
+                  
+                   FifthCanvasB1.SetActive(false);
+                   Man.transform.GetComponent<BoxCollider>().enabled = true;
+
+                   timeElapsed = 0;
+                   pointer.fillAmount = 0;
+
+                }
+
+            }else if(hit.transform.tag == "ManCanvasB1"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                   ManText1.SetActive(false);
+
+                   FifthCanvasT3.SetActive(true);
+                   Fitext3.SetActive(true);
+                  
+                   ManCanvasB1.SetActive(false);
+                   FifthCanvasB2.SetActive(true);
+                   Man.transform.GetComponent<BoxCollider>().enabled = true;
+
+                   timeElapsed = 0;
+                   pointer.fillAmount = 0;
+
+                }
+
+            }else if(hit.transform.tag == "FifthCanvasB2"){
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2){
+                   Fitext3.SetActive(false);
+
+                   ManTyping2.SetActive(true);
+                   ManText2.SetActive(true);
+                  
+                   FifthCanvasB2.SetActive(false);
+                   
+                   timeElapsed = 0;
+                   pointer.fillAmount = 0;
+
+                }
+
             }
             else if(hit.transform.tag == "MainFish"){
                 pointer.fillAmount = timeElapsed / 2;
@@ -332,7 +404,7 @@ public class raycasting : MonoBehaviour
                         FourthCanvas2Text.SetActive(true);
 
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
-                        whaleArrowPointer1.SetActive(true);
+                        ManArrowPointer1.SetActive(true);
                     }
                 }
             }
@@ -362,8 +434,8 @@ public class raycasting : MonoBehaviour
                     }else if(count == 3)
                     {
                         FourthCanvas2Text.SetActive(false);
-                        whaleArrowPointer1.SetActive(false);
-                        whaleArrowPointer2.SetActive(true);
+                        ManArrowPointer1.SetActive(false);
+                        ManArrowPointer2.SetActive(true);
                     }
                 }
             }
@@ -407,8 +479,14 @@ public class raycasting : MonoBehaviour
                     }
                     else if(count == 3)
                     {
-                        whaleArrowPointer2.SetActive(false);
-                        Whale.SetActive(true);
+                        ManArrowPointer2.SetActive(false);
+                        Man.SetActive(true);
+
+                        Fitext1.SetActive(true);
+                        FifthCanvasT1.SetActive(true);
+
+                        FifthCanvasB1.SetActive(true);
+
                     }
                     count += 1;
                 }
@@ -422,10 +500,10 @@ public class raycasting : MonoBehaviour
         Debug.DrawRay(cam.transform.position,forward,Color.red);
     }
 
-    IEnumerator moveWhale(){
+    IEnumerator moveMan(){
         
-        while(transform.position != whalePos.position){
-             transform.position = Vector3.MoveTowards(transform.position,whalePos.position,Time.deltaTime*10);
+        while(transform.position != ManPos.position){
+             transform.position = Vector3.MoveTowards(transform.position,ManPos.position,Time.deltaTime*10);
              yield return null;
         }
         

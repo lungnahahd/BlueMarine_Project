@@ -15,6 +15,13 @@ TagManager:
   - FirstCanvasB2
   - FirstCanvasB3
   - TV
+  - SecondCanvasB1
+  - ThirdCanvasB1
+  - FourthCanvasB1
+  - Man
+  - FifthCanvasB1
+  - FifthCanvasB2
+  - ManCanvasB1
   layers:
   - Default
   - TransparentFX
