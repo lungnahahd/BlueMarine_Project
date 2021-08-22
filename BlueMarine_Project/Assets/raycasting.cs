@@ -19,6 +19,7 @@ public class raycasting : MonoBehaviour
     public GameObject ManTyping1;
     public GameObject ManTyping2;
     public GameObject ManCanvasB1;
+    public GameObject ManCanvasB2;
 
     //FifthCanvas
     public GameObject FifthCanvasB1;
@@ -141,6 +142,8 @@ public class raycasting : MonoBehaviour
             if(hit.transform.tag == "Man"){
                 pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
+                
+
 
                 if(timeElapsed >= 2){
 
@@ -314,9 +317,11 @@ public class raycasting : MonoBehaviour
             }else if(hit.transform.tag == "FifthCanvasB1"){
                 pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
+                MainFish.transform.GetComponent<BoxCollider>().enabled = false;
 
                 if(timeElapsed >= 2){
-                   Fitext1.SetActive(false);
+                    Man.transform.GetComponent<BoxCollider>().enabled = true;
+                    Fitext1.SetActive(false);
 
                    FifthCanvasT2.SetActive(true);
                    Fitext2.SetActive(true);
@@ -348,12 +353,30 @@ public class raycasting : MonoBehaviour
 
                 }
 
-            }else if(hit.transform.tag == "FifthCanvasB2"){
+            }else if(hit.transform.tag == "ManCanvasB2")
+            {
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+                MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", true);
+                if (timeElapsed >= 2)
+                {
+
+                    transform.GetComponent<Animator>().SetBool("SeeArrow", true);
+                    timeElapsed = 0;
+                    pointer.fillAmount = 0;
+
+                }
+                
+            }
+            else if(hit.transform.tag == "FifthCanvasB2"){
                 pointer.fillAmount = timeElapsed / 2;
                 timeElapsed = timeElapsed + Time.deltaTime;
 
                 if(timeElapsed >= 2){
                    Fitext3.SetActive(false);
+                    ManCanvasB2.SetActive(true);
+
+                    
 
                    ManTyping2.SetActive(true);
                    ManText2.SetActive(true);

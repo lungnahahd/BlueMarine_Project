@@ -22,6 +22,7 @@ TagManager:
   - FifthCanvasB1
   - FifthCanvasB2
   - ManCanvasB1
+  - ManCanvasB2
   layers:
   - Default
   - TransparentFX
