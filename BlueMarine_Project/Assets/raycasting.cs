@@ -120,6 +120,8 @@ public class raycasting : MonoBehaviour
     public GameObject ManArrowPointer1;
     public GameObject ManArrowPointer2;
 
+    public GameObject BlueMarineImage;
+
     int count = 0;
 
     void Start()
@@ -151,6 +153,7 @@ public class raycasting : MonoBehaviour
                     ManTyping1.SetActive(true);
                     ManText1.SetActive(true);
                     //Man.SetActive(false);
+                    Man.transform.GetComponent<BoxCollider>().enabled = false;
 
                     Fitext2.SetActive(false);
                     ManCanvasB1.SetActive(true);
@@ -340,13 +343,14 @@ public class raycasting : MonoBehaviour
 
                 if(timeElapsed >= 2){
                    ManText1.SetActive(false);
+                    
 
                    FifthCanvasT3.SetActive(true);
                    Fitext3.SetActive(true);
                   
                    ManCanvasB1.SetActive(false);
                    FifthCanvasB2.SetActive(true);
-                   Man.transform.GetComponent<BoxCollider>().enabled = true;
+                   
 
                    timeElapsed = 0;
                    pointer.fillAmount = 0;
@@ -362,6 +366,7 @@ public class raycasting : MonoBehaviour
                 {
 
                     transform.GetComponent<Animator>().SetBool("SeeArrow", true);
+                    BlueMarineImage.SetActive(true);
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
 
