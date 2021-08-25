@@ -375,6 +375,8 @@ public class raycasting : MonoBehaviour
                     siText1.SetActive(true);
                     SixthCanvasT1.SetActive(true);
 
+                    Man.SetActive(false);
+
                     ManText2.SetActive(false);
                     ManCanvasB2.SetActive(false);
                     timeElapsed = 0;
