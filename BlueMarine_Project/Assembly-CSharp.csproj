@@ -191,32 +191,24 @@
      <Compile Include="Assets\GoogleVR\Beta\Scripts\GvrBetaControllerVisualMulti.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\AndroidNativeKeyboardProvider.cs" />
      <Compile Include="Assets\GoogleVR\Scripts\Keyboard\Internal\KeyboardProviders\EmulatorKeyboardProvider.cs" />
-     <Compile Include="Assets\_U3DJPFont\Demo\SampleScene.cs" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlayFont.shader" />
-     <None Include="Assets\_U3DJPFont\Fonts\MPlusTestflight63a\LICENSE_E.txt" />
-     <None Include="Assets\_U3DJPFont\TextMeshProFont\school-characters-list.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrReticleShader.shader" />
      <None Include="Assets\GoogleVR\Beta\Shaders\GvrSeeThroughUI.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-Cardboard.xml" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlayColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUIOverlay.shader" />
-     <None Include="Assets\_U3DJPFont\Fonts\MPlusTestflight63a\README_J.txt" />
      <None Include="Assets\GoogleVR\Shaders\GvrAdditiveOverlay.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-6DOF.xml" />
      <None Include="Assets\GoogleVR\Plugins\Android\proguard-gvr.txt" />
-     <None Include="Assets\_U3DJPFont\readme_jp.txt" />
      <None Include="Assets\Stylized Underwater Creatures\Shaders\ToonLight.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrControllerReticle.shader" />
      <None Include="Assets\GoogleVR\Plugins\Android\AndroidManifest-Daydream.xml" />
      <None Include="Assets\TurnTheGameOn\Arrow WayPointer\Read Me.txt" />
-     <None Include="Assets\_U3DJPFont\readme.txt" />
      <None Include="Assets\GoogleVR\Shaders\Video\VideoUnlitShader.shader" />
-     <None Include="Assets\_U3DJPFont\Fonts\MPlusTestflight63a\README_E.txt" />
      <None Include="Assets\GoogleVR\Demos\Shaders\HelloVR\HelloVRUnlitGrayscaleToColor.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTransparentOverlay.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrUnlitTextureOverlay.shader" />
      <None Include="Assets\GoogleVR\Shaders\GvrController.shader" />
-     <None Include="Assets\_U3DJPFont\Fonts\MPlusTestflight63a\LICENSE_J.txt" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2020.1.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
