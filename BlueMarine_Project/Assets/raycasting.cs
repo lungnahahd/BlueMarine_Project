@@ -21,17 +21,6 @@ public class raycasting : MonoBehaviour
     public GameObject ManCanvasB1;
     public GameObject ManCanvasB2;
 
-    //FifthCanvas
-    public GameObject FifthCanvasB1;
-    public GameObject FifthCanvasB2;
-    public GameObject Fitext1;
-    public GameObject Fitext2;  
-    public GameObject Fitext3;  
-
-    public GameObject FifthCanvasT1;
-    public GameObject FifthCanvasT2;
-    public GameObject FifthCanvasT3;
-
 
     public Transform TurtlePos;
     public GameObject Turtle;
@@ -101,7 +90,22 @@ public class raycasting : MonoBehaviour
 
 
 
+     //FifthCanvas
+    public GameObject FifthCanvasB1;
+    public GameObject FifthCanvasB2;
+    public GameObject Fitext1;
+    public GameObject Fitext2;  
+    public GameObject Fitext3;  
 
+    public GameObject FifthCanvasT1;
+    public GameObject FifthCanvasT2;
+    public GameObject FifthCanvasT3;
+
+
+    //sixthCanvas
+
+    public GameObject siText1;
+    public GameObject SixthCanvasT1;
 
 
 
@@ -367,6 +371,12 @@ public class raycasting : MonoBehaviour
 
                     transform.GetComponent<Animator>().SetBool("SeeArrow", true);
                     BlueMarineImage.SetActive(true);
+
+                    siText1.SetActive(true);
+                    SixthCanvasT1.SetActive(true);
+
+                    ManText2.SetActive(false);
+                    ManCanvasB2.SetActive(false);
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
 
