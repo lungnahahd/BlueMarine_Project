@@ -43,6 +43,11 @@ public class Raycast_In_First : MonoBehaviour
                     StartCoroutine(ShowTV());
                 }
             }
+            else
+            {
+                timeElapsed = 0;
+                pointer.fillAmount = 0;
+            }
 
         }
         else
