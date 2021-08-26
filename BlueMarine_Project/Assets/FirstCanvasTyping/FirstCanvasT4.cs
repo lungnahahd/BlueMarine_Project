@@ -8,7 +8,7 @@ public class FirstCanvasT4 : MonoBehaviour
     // Start is called before the first frame update
 
     public Text tx4;
-    private string m_text4 = "나한데 커서를 올리고주변에 화살표를 찾아 커서를 올려봐~";
+    private string m_text4 = "나한테 커서를 올리고 주변에 화살표를 찾아 커서를 올려봐~";
 
     void Start()
     {

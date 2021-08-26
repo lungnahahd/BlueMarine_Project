@@ -4445,7 +4445,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "\uB098\uB294\n\uBB3C\uACE0\uAE30 \uC138\uACC4\uC758 \n\uAC00\uC774\uB4DC
-    \uB9C8\uB9B0\uC774\uC57C\n\uC798\uBD80\uD0C1\uD574!"
+    \uB9C8\uB9B0\uC774\uC57C\n\uC798 \uBD80\uD0C1\uD574!"
 --- !u!222 &267685798
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6832,7 +6832,7 @@ RectTransform:
   m_GameObject: {fileID: 420619088}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1118413810}
   m_RootOrder: 0
@@ -8019,7 +8019,7 @@ RectTransform:
   m_GameObject: {fileID: 487749664}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_Children: []
   m_Father: {fileID: 1118413810}
   m_RootOrder: 1
@@ -9708,7 +9708,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uC548\uB155!\n\uBB3C\uACE0\uAE30\uC138\uACC4\uC5D0 \n\uC628\uAC78 \uD658\uC601\uD574!"
+  m_Text: "\uC548\uB155!\n\uBB3C\uACE0\uAE30 \uC138\uACC4\uC5D0 \n\uC628 \uAC78 \uD658\uC601\uD574!"
 --- !u!222 &552205004
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11623,6 +11623,102 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 5573549579145475973, guid: 169b4e927fae60e409d7d600fe2fa2e4, type: 3}
   m_PrefabInstance: {fileID: 685513823}
   m_PrefabAsset: {fileID: 0}
+--- !u!82 &685513826
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 685513825}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: fd70ba57b06b74647bcdf55e92075418, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &685764020
 GameObject:
   m_ObjectHideFlags: 0
@@ -11693,8 +11789,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uBB3C\uACE0\uAE30 \uC138\uACC4\uC758 \n\uCE5C\uAD6C\uB4E4\uC774 \uD560\uC598\uAE30\uAC00
-    \uC788\uB370 \n\uAC19\uC774\uD55C\uBC88\uB4E4\uC73C\uB7EC \uAC08\uAE4C??"
+  m_Text: "\uBB3C\uACE0\uAE30 \uC138\uACC4\uC758 \n\uCE5C\uAD6C\uB4E4\uC774 \uD560
+    \uC598\uAE30\uAC00 \uC788\uB370 \n\uAC19\uC774 \uD55C \uBC88 \uB4E4\uC73C\uB7EC
+    \uAC08\uAE4C??"
 --- !u!222 &685764023
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29217,7 +29314,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\uB098\uD55C\uB370 \uCEE4\uC11C\uB97C \uC62C\uB9AC\uACE0\uC8FC\uBCC0\uC5D0
+  m_Text: "\uB098\uD55C\uD14C \uCEE4\uC11C\uB97C \uC62C\uB9AC\uACE0 \uC8FC\uBCC0\uC5D0
     \uD654\uC0B4\uD45C\uB97C \uCC3E\uC544\n\uCEE4\uC11C\uB97C \uC62C\uB824\uBD10~"
 --- !u!222 &1801973654
 CanvasRenderer:
