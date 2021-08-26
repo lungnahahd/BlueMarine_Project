@@ -8,7 +8,7 @@ public class FifthCanvasT3 : MonoBehaviour
     // Start is called before the first frame update
 
     public Text tx3;
-    private string m_text3 = "너는 잘 몰랐구나...물고기세계 동물들이 사람때문에 아파해 그런데 물고기세계 동물들이 계속 아파하면 아프게 만든 사람도 결국 아파지게 된다는 사실이야... 이사실을 알았으면 좋겠어!! ";
+    private string m_text3 = "너는 잘 몰랐구나...물고기세계 동물들이 사람 때문에 아파해.. 그러면서 바다는 점점 병들어가고, 바다를 아프게 만든 사람도 결국 아파지게 될거야... 이 사실을 알았으면 좋겠어!! ";
 
     void Start()
     {

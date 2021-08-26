@@ -8,7 +8,7 @@ public class SecondCanvasT1 : MonoBehaviour
     // Start is called before the first frame update
 
     public Text tx1;
-    private string m_text1 = "처음으로 소개해줄 친구는 거북이야! ";
+    private string m_text1 = "처음으로 소개해 줄 친구는 거북이야! ";
     void Start()
     {
          StartCoroutine(typing());
