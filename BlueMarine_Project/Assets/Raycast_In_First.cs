@@ -55,7 +55,7 @@ public class Raycast_In_First : MonoBehaviour
             timeElapsed = 0;
             pointer.fillAmount = 0;
         }
-        Debug.DrawRay(cam.transform.position, forward, Color.red);
+
     }
     IEnumerator ShowTV()
     {

@@ -71,7 +71,6 @@
     <Compile Include="Assets\GoogleVR\Scripts\EventSystem\GvrBasePointer.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\Video\GvrVideoPlayerTexture.cs" />
     <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\DemoContent\CharacterController\Scripts\SmoothFollow.cs" />
-    <Compile Include="Assets\Raycast_In_Final.cs" />
     <Compile Include="Assets\GoogleVR\Demos\Scripts\PermissionsDemo\PermissionsFlowManager.cs" />
     <Compile Include="Assets\GoogleVR\Scripts\GvrCardboardHelpers.cs" />
     <Compile Include="Assets\TurnTheGameOn\Arrow WayPointer\Scripts\Waypoint.cs" />

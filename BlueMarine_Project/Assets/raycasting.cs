@@ -126,6 +126,8 @@ public class raycasting : MonoBehaviour
 
     public GameObject BlueMarineImage;
 
+    public GameObject OutBut;
+
     int count = 0;
 
     void Start()
@@ -161,7 +163,6 @@ public class raycasting : MonoBehaviour
 
                     Fitext2.SetActive(false);
                     ManCanvasB1.SetActive(true);
-                    Debug.Log("Whale hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
 
                 }
@@ -177,7 +178,6 @@ public class raycasting : MonoBehaviour
                     Turtle.SetActive(false);
 
                     Ttext2.SetActive(false);
-                    Debug.Log("Turtle hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
@@ -193,7 +193,6 @@ public class raycasting : MonoBehaviour
                     Dolphin.SetActive(false);
 
                     Thtext2.SetActive(false);
-                    Debug.Log("Dolphin hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
@@ -209,7 +208,6 @@ public class raycasting : MonoBehaviour
                     Shark.SetActive(false);
 
                     Fotext2.SetActive(false);
-                    Debug.Log("Shark hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
@@ -264,7 +262,6 @@ public class raycasting : MonoBehaviour
 
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
-                    Debug.Log("but3 hit");
                     MainFish.transform.GetComponent<BoxCollider>().enabled = true;
                 }
 
@@ -382,6 +379,8 @@ public class raycasting : MonoBehaviour
                     timeElapsed = 0;
                     pointer.fillAmount = 0;
 
+                    OutBut.SetActive(true);
+
                 }
                 
             }
@@ -446,6 +445,16 @@ public class raycasting : MonoBehaviour
                         MainFish.transform.GetComponent<Animator>().SetBool("SeeMainFish", false);
                         ManArrowPointer1.SetActive(true);
                     }
+                }
+            }
+            else if(hit.transform.tag == "OutGame")
+            {
+                pointer.fillAmount = timeElapsed / 2;
+                timeElapsed = timeElapsed + Time.deltaTime;
+
+                if(timeElapsed >= 2)
+                {
+                    Application.Quit();
                 }
             }
             else if(hit.transform.tag == "ArrowPointer")
@@ -537,7 +546,6 @@ public class raycasting : MonoBehaviour
             timeElapsed = 0;
             pointer.fillAmount = 0;
         }
-        Debug.DrawRay(cam.transform.position,forward,Color.red);
     }
 
     IEnumerator moveMan(){

@@ -23,6 +23,7 @@ TagManager:
   - FifthCanvasB2
   - ManCanvasB1
   - ManCanvasB2
+  - OutGame
   layers:
   - Default
   - TransparentFX
